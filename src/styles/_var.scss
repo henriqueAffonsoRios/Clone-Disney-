@@ -1,0 +1,68 @@
+// Paleta de Cores
+
+$bgColor: #040714;
+$titleColor: #f9f9f9;
+$textColor: silver;
+
+// Fonts
+
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/fonts/Avenir-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/fonts/Avenir-Bold.woff2);
+  font-weight: 700;
+}
+
+// Mixings
+
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  color: $textColor;
+}
+
+@mixin title($fontSize: 40px) {
+  @include text($fontSize);
+  color: $titleColor;
+}
+
+// Classes
+
+// Include text mixin
+
+.text--big {
+  @include text(18px);
+}
+
+.text {
+  @include text;
+}
+
+.text--small {
+  @include text(12px);
+}
+
+.text-link {
+  @include text(18px);
+  color: $titleColor;
+  text-decoration: underline;
+}
+
+// Include title mixin
+
+.title--big {
+  @include title(44px);
+}
+
+.title {
+  @include title;
+}
+
+.title--small {
+  @include title(31px);
+}

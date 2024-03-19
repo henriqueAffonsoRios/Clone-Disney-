@@ -1,5 +1,7 @@
-$bgColor: rgba(15, 190, 234, 0.267);
+@use 'var';
+@use 'hero';
 
 body {
-  background-color: $bgColor;
+  background-color: var.$bgColor;
+  font-family: Avenir;
 }
