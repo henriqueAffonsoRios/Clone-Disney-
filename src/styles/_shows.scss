@@ -8,6 +8,12 @@
     display: flex;
     justify-content: center;
 
+    @media (max-width:768px) {
+      white-space: nowrap;
+      overflow-x: scroll;
+      padding-left: 20px;
+    }
+
     &__button {
       color: var.$titleColor;
       font-size: 20px;
@@ -18,6 +24,10 @@
       text-transform: uppercase;
       margin: 0 1vw;
       cursor: pointer;
+
+      @media (max-width:768px) {
+        font-size: 16px;
+      }
 
       &--is-active {
         border-color: var.$titleColor;
@@ -30,6 +40,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
     margin-top: 44px;
+
+    @media (max-width:768px) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     &--is-active {
       display: grid;
